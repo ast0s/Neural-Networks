@@ -18,29 +18,35 @@
                 switch (Console.ReadLine())
                 {
                     case "1":
+                        Console.WriteLine("The weights:");
                         s.SetWeightsFromTxt();
                         s.PrintWeights();
                         break;
                     case "2":
+                        Console.WriteLine("The weights:");
                         s.SetFinalWeightsFromTxt();
                         s.PrintWeights();
                         break;
                     case "3":
+                        Console.WriteLine("The weights:");
                         s.SetRandomWeights();
                         s.PrintWeights();
                         break;
                     case "4":
+                        Console.WriteLine("The weights:");
                         s.SetManualWeights();
                         break;
                     default:
                         break;
                 }
 
+                Console.WriteLine("The input:");
                 s.SetPerceptronInputXFromTxt();
                 s.PrintPerceptronInputX();
 
                 Console.WriteLine("How many eras should perceptron be trained?");
                 s.P.Progonka(int.Parse(Console.ReadLine()));
+                Console.WriteLine("The result:");
                 s.PrintWeights();
                 s.WriteTxtFinalWeights();
             }
